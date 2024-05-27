@@ -14,7 +14,7 @@ stages:
     pool:
       vmImage: 'ubuntu-latest'
     steps:
-    - script: 'echo "Name: $(Build.DefinitionName), Id: $(Build.BuildId), No: $(Build.BuildNumber), LocalPath: $(Build.Repository.LocalPath), Registory: $(webRepository), SouresDirectory: $(Build.SourcesDirectory)" 
+    - script: 'echo "Name: $(Build.DefinitionName), Id: $(Build.BuildId), No: $(Build.BuildNumber), LocalPath: $(Build.Repository.LocalPath), Registory: $(webRepository), SouresDirectory: $(Build.SourcesDirectory)"'
       displayName: 'Get Build info'
     - task: Docker@2
       displayName: 'Build and push the image to container registry'
